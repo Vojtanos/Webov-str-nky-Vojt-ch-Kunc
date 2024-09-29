@@ -30,19 +30,22 @@ const projects = (await getCollection('work'))
 		<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero">
 				<Hero
-					title="Hello, my name is Jeanine White"
-					tagline="I am a Creative Developer who is currently based in Portland, Oregon."
+					title="Proč rychlý, levný web nemusí být utopie?"
+					tagline=`,,Má frustrace, když se mě lidi neustále ptali, jak si udělat web, co se vyplatí a jak to funguje, 
+					jsem si uvědomil, že to, co by mně dávalo pro většinu smysl na trhu není.
+					"`
 					align="start"
 				>
 					<div class="roles">
-						<Pill><Icon icon="code" size="1.33em" /> Developer</Pill>
-						<Pill><Icon icon="microphone-stage" size="1.33em" /> Speaker</Pill>
-						<Pill><Icon icon="pencil-line" size="1.33em" /> Writer</Pill>
+						<Pill><Icon icon="code" size="1.33em" /> Programátor</Pill>
+						<Pill><Icon icon="chart" size="1.33em" /> Datový analytik</Pill>
+						<Pill><Icon icon="mountain" size="1.33em" /> Pohodář</Pill>
 					</div>
 				</Hero>
 
 				<img
-					alt="Jeanine White smiling in a red plaid shirt and tortoise shell glasses"
+					class="portrait"
+					alt="Já vývojář - úvodní obrázek"
 					width="480"
 					height="620"
 					src="/assets/portrait.jpg"
@@ -55,8 +58,8 @@ const projects = (await getCollection('work'))
 		<main class="wrapper stack gap-20 lg:gap-48">
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Selected Work</h3>
-					<p>Take a look below at some of my featured work for clients from the past few years.</p>
+					<h3>Jaké máte možnosti?</h3>
+					<p>Tuto sekci berte jako určitou mapu, pomocí které se orientuje, co všechno je ve světě internetu možné.</p>
 				</header>
 
 				<div class="gallery">
@@ -73,7 +76,7 @@ const projects = (await getCollection('work'))
 
 				<div class="cta">
 					<CallToAction href="/work/">
-						View All
+						Zobrazit všechny
 						<Icon icon="arrow-right" size="1.2em" />
 					</CallToAction>
 				</div>
@@ -81,10 +84,9 @@ const projects = (await getCollection('work'))
 
 			<section class="section with-background bg-variant">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Mentions</h3>
+					<h3>Zhotovené řešení</h3>
 					<p>
-						I have been fortunate enough to receive praise for my work in several publications. Take
-						a look below to learn more.
+						Mám velké zkušenosti co se týče tvorby webů. Nicméně je rozdíl dělat
 					</p>
 				</header>
 
@@ -121,7 +123,7 @@ const projects = (await getCollection('work'))
 	.hero img {
 		aspect-ratio: 5 / 4;
 		object-fit: cover;
-		object-position: top;
+		//object-position: top;
 		border-radius: 1.5rem;
 		box-shadow: var(--shadow-md);
 	}
@@ -132,6 +134,10 @@ const projects = (await getCollection('work'))
 			grid-template-columns: 6fr 4fr;
 			padding-inline: 2.5rem;
 			gap: 3.75rem;
+		}
+
+		.portrait {
+			filter: brightness(79%);
 		}
 
 		.roles {
